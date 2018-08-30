@@ -9,7 +9,7 @@ scope: { myAttr: '=outAttr' }
 
 `=`表示“双向绑定”。在AngularJS中，它的意思是，哪怕`outAttr`与`myAttr`这两个变量的引用都指向了新的值，另一个也会跟着变。
 
-相应的，如果是单项绑定`scope: { myAttr: '<outAttr' }`，则`myAttr`变了`outAttr`不会跟着变。
+相应的，如果是单项绑定`scope: { myAttr: '<outAttr' }`，则`myAttr`引用变了`outAttr`不会跟着变（如果只是属性变了，`outAttr`还是会变）。
 
 其它：
 
