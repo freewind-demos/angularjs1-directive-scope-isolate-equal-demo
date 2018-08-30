@@ -6,7 +6,7 @@ app.directive('myDirective', function () {
     return {
         restrict: 'E',
         scope: {
-            directiveUserName: '@userName'
+            directiveUserName: '=userName'
         },
         template: '<div>' +
             '<h3>Inside myDirective</h3>' +

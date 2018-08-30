@@ -1,16 +1,16 @@
-AngularJS1 Directive `scope: { myAttr: '@outAttr' }` Demo
+AngularJS1 Directive `scope: { myAttr: '=outAttr' }` Demo
 =========================================================
 
 ```
-scope: { myAttr: '@outAttr' }
+scope: { myAttr: '=outAttr' }
 ```
 
 - `scope: {}`: 表示directive独立了，不再使用外层controller中的`$scope`了
 - `outAttr`: 表示外面需要使用`out-attr="{{ something }}"`的方式向我传参数
 - `myAttr`: 表示directive里面使用`myAttr`这个名字，并且可以通过`$scope.myAttr`引用值
-- `@`: 关键点，表示“单向”改变，只能从外部到内部
+- `=`: 关键点，表示“双向绑定”
     - 如果外层改变了`something`的内容，则`myAttr`跟着变
-    - 但是directive内部改变了`myAttr`的值，`something`不会变
+    - 如果directive内部改变了`myAttr`的值，`something`也跟着变
 
 ```
 npm install
