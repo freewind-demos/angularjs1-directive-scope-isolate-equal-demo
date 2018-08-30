@@ -19,7 +19,7 @@ app.directive('myDirective', function () {
         },
         template: '<div>' +
             '{{ directiveUserInfo }}' +
-            '<button ng-click="change()">two-way change</button> ' +
+            '<button ng-click="change()">change from directive</button> ' +
             '</div>',
         controller: function ($scope) {
             $scope.change = function () {
