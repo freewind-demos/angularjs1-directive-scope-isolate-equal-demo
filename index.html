@@ -20,12 +20,9 @@
 </head>
 <body ng-app="app">
 <div ng-controller="myController" class="controller">
-    <h3>Outside</h3>
-    <div>
-        <label>Name:</label>
-        <input ng-model="userInfo.name"/>
+    <div>{{ userInfo }}
+        <button ng-click="change()">two-way change</button>
     </div>
-    <div>myController.userInfo: <span class="highlight">{{ userInfo }}</span></div>
     <div class="directive">
         <my-directive user-info="userInfo"></my-directive>
     </div>
