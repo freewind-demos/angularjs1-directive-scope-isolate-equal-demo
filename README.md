@@ -6,7 +6,7 @@ scope: { myAttr: '=outAttr' }
 ```
 
 - `scope: {}`: 表示directive独立了，不再使用外层controller中的`$scope`了
-- `outAttr`: 表示外面需要使用`out-attr="something"`的方式向我传参数
+- `outAttr`: 表示外面需要使用`out-attr="something"`的方式向我传参数（比如`<my-directive out-attr="somthing"/>`)
     - `something`必须是一个变量名，不能使用表达式，因为是双向绑定
     - 可以是任何类型，而不需要像`@outAttr`那样最后结果只能是字符串
 - `myAttr`: 表示directive里面使用`myAttr`这个名字对应`outAttr`，可以使用`$scope.myAttr`引用值
